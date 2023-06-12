@@ -1,0 +1,34 @@
+/* transition */
+
+.fade-enter-active,
+.fade-leave-active {
+  transition: opacity 0.3s ease;
+}
+
+.fade-enter-from,
+.fade-leave-to {
+  opacity: 0;
+}
+
+/* 
+.easeIn-enter-active,
+.easeIn-leave-active {
+  transition: all 0.5s ease;
+}
+
+.easeIn-enter-from,
+.easeIn-leave-to {
+  transform: translateY(-10%);
+} */
+
+
+@keyframes eui-dropdown-anim {
+  0% {
+    transform: translate(0, -2px);
+    opacity: 0;
+  }
+  100% {
+    transform: translate(0, 0);
+    opacity: 1;
+  }
+}

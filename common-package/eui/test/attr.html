@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <div class="app" id="app" data-value="{a:1, b:2, c:3}"></div>
+    <script type="module">
+        import { dom } from '../dom.js'
+        console.log('dom', dom)
+        const attr = dom.select('.app').attr()
+        console.log('attr', attr)
+    </script>
+</body>
+
+</html>

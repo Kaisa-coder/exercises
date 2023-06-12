@@ -1,0 +1,165 @@
+:root {
+  --eui-normal: rgb(0 109 177 / 87%);
+  --eui-normal-bg: rgba(228, 245, 255, 0.87);
+  --eui-success: rgba(35, 177, 0, 0.87);
+  --eui-success-bg: rgba(231, 255, 225, 0.87);
+  --eui-warning: rgba(228, 148, 0, 0.87);
+  --eui-warning-bg: rgba(255, 221, 157, 0.87);
+  --eui-error: rgba(255, 72, 87, 0.87);
+  --eui-error-bg: rgba(255, 232, 232, 0.87);
+  --eui-mask: rgba(1, 18, 43, 0.65);
+  --eui-border-radius: 4px;
+}
+
+
+.eui-toptip {
+  position: fixed;
+  left: 0;
+  right: 0;
+  height: 60px;
+  line-height: 60px;
+  z-index: 9999;
+  text-align: center;
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  padding: 0 10px;
+  top: 0;
+  background: var(--eui-normal-bg);
+  border-bottom: 2px solid var(--eui-normal);
+}
+
+.eui-toptip.normal {
+  background: var(--eui-normal-bg);
+  border-color: var(--eui-normal);
+}
+
+.eui-toptip.success {
+  background: var(--eui-success-bg);
+  border-color: var(--eui-success);
+}
+
+.eui-toptip.warning {
+  background: var(--eui-warning-bg);
+  border-color: var(--eui-warning);
+}
+
+.eui-toptip.error {
+  background: var(--eui-error-bg);
+  border-color: var(--eui-error);
+}
+
+.eui-toast {
+  /* min-width: 150px; */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: fixed;
+  background: rgb(7 9 50 / 65%);
+  color: #fff;
+  height: 50px;
+  left: 50%;
+  top: 10%;
+  transform: translateX(-50%);
+  z-index: 9999;
+  border-radius: 4px;
+  padding: 0 16px;
+}
+
+.eui-toast__text {
+  margin: 0 8px;
+}
+
+.eui-toast.message {
+  background: var(--eui-normal);
+}
+
+.eui-toast.warning {
+  background: var(--eui-warning);
+}
+
+.eui-toast.success {
+  background: var(--eui-success);
+}
+
+.eui-toast.error {
+  background: var(--eui-error);
+}
+
+.eui-mask {
+  background: var(--eui-mask);
+  position: fixed;
+  z-index: 300;
+  left: 0;
+  right: 0;
+  top: 0;
+  bottom: 0;
+}
+
+.eui-loading {
+  position: fixed;
+  z-index: 301;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+}
+
+
+input.invalid:not([type=checkbox]) {
+  border-color: var(--eui-error);
+}
+
+.eui-tooltip {
+  --tooltip--bg: rgba(0, 7, 17, 0.7);
+  text-align: center;
+  color: #fff;
+  background: var(--tooltip--bg);
+  font-size: 12px;
+  padding: 5px 10px;
+  position: fixed;
+  box-shadow: 0px 3px 6px rgba(0, 0, 0, 0.12), 0px 6px 16px rgba(0, 0, 0, 0.08), 0px 9px 28px rgba(0, 0, 0, 0.05);
+  border-radius: 3px;
+  z-index: 310;
+  pointer-events: none;
+}
+
+.eui-confirm {
+  min-width: 380px;
+  position: absolute;
+  top: 28%;
+  left: 50%;
+  transform: translateX(-50%);
+  background: #fff;
+  z-index: 301;
+  border-radius: 3px;
+  animation: eui-confirm-anim 0.2s;
+  opacity: 1;
+}
+.eui-confirm__header {
+  padding: 16px;
+  font-size: 16px;
+  display: flex;
+  align-items: center;
+}
+.eui-confirm__icon {
+  margin-right: 8px;
+}
+.eui-confirm__body {
+  padding: 8px 16px;
+}
+.eui-confirm__footer {
+  text-align: right;
+  padding: 16px;
+}
+.eui-confirm-out-anim {
+  animation: eui-confirm-anim 0.2s reverse;
+}
+@keyframes eui-confirm-anim {
+  /* eui-confirm-anim */
+  from {
+    top: 25%
+  }
+  top {
+    top: 28%
+  }
+} 
